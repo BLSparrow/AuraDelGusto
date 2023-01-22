@@ -1,0 +1,57 @@
+.switch {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+
+.switch input {
+    display: none;
+}
+
+.maintxt {
+    width: 18rem;
+    height: 18rem;
+    display: inline-block;
+    cursor: pointer;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat no-repeat !important;
+    transition: .75s;
+    filter: grayscale(100%);
+}
+
+.maintxt > span {
+    top: 0;
+    left: 0;
+}
+
+input:checked + .maintxt {
+    filter: grayscale(0%);
+}
+
+.cross::after,
+.cross::before {
+    position: absolute;
+    content: ' ';
+    top: 50%;
+    width: 100%;
+    height: 3px;
+    background-color: yellow;
+}
+
+.cross::after {
+    transform: rotate(-45deg) translateY(-50%);
+    left: 0px;
+}
+
+.cross::before {
+    transform: rotate(45deg) translateY(-50%);
+    right: 0px;
+}
+
+.modal-content {
+    color: #f4f4f4;
+    background-color: #ffffff10;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px)
+}
